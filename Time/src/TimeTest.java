@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -5,8 +6,9 @@ import org.junit.jupiter.api.Test;
 class TimeTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testGetTotalSecondsGood() {
+		int seconds = Time.getTotalSeconds("01:00:05");
+		assertTrue("The seconds were calculated properly", seconds== 5);
 	}
 
 }
